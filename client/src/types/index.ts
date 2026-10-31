@@ -1,7 +1,9 @@
 export interface Series {
   id: string;
   title: string;
-  poster: string; //картинки
+  poster: string;
+  genre?: string;
+  rating?: number;
 }
 
 export interface Match {
@@ -9,4 +11,10 @@ export interface Match {
   seriesA: Series;
   seriesB: Series;
   winner?: Series;
+}
+
+export interface Round {
+  index: number;
+  matches: Match[];
+  name: string;
 }
